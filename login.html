@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <title>Sistema</title>
 </head>
 <body>
 
 <h2>Login do Sistema</h2>
 
-<form onsubmit="return validarLogin()">
+<div id="login">
     <label>Usuário:</label><br>
     <input type="text" id="usuario"><br><br>
 
     <label>Senha:</label><br>
     <input type="password" id="senha"><br><br>
 
-    <button type="submit">Entrar</button>
-</form>
+    <button onclick="validarLogin()">Entrar</button>
+</div>
+
+<!-- DASHBOARD ESCONDIDO -->
+<div id="dashboard" style="display:none;">
+    <h2>Bem-vindo ao Sistema</h2>
+    <p>Área de gerenciamento de não conformidades</p>
+
+    <button onclick="alert('Ir para cadastro de não conformidade')">
+        Registrar Não Conformidade
+    </button>
+</div>
 
 <script>
 function validarLogin() {
@@ -23,12 +33,11 @@ function validarLogin() {
     var senha = document.getElementById("senha").value;
 
     if(user === "admin" && senha === "123") {
-        window.location.href = "dashboard.html";
+        document.getElementById("login").style.display = "none";
+        document.getElementById("dashboard").style.display = "block";
     } else {
         alert("Usuário ou senha incorretos!");
     }
-
-    return false;
 }
 </script>
 
