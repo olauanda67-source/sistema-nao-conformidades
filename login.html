@@ -1,36 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <title>Dashboard</title>
 </head>
 <body>
 
-<h2>Login</h2>  
+<h2>Bem-vindo ao Sistema</h2>
 
-<form onsubmit="return validarLogin()">
-    <label>Usuário:</label><br>
-    <input type="text" id="usuario"><br><br>
+<p>Área de gerenciamento de não conformidades</p>
 
-    <label>Senha:</label><br>
-    <input type="password" id="senha"><br><br>
-
-    <button type="submit">Entrar</button>
-</form>
-
-<p id="mensagem"></p>
+<button onclick="irCadastro()">Registrar Não Conformidade</button>
 
 <script>
-function validarLogin() {
-    var user = document.getElementById("usuario").value;
-    var senha = document.getElementById("senha").value;
-
-    if(user === "admin" && senha === "123") {
-        document.getElementById("mensagem").innerHTML = "Login realizado com sucesso!";
-    } else {
-        document.getElementById("mensagem").innerHTML = "Usuário ou senha incorretos!";
-    }
-
-    return false;
+function irCadastro() {
+    window.location.href = "cadastro.html";
 }
 </script>
 
