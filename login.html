@@ -1,54 +1,21 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<title>Login</title>
+    <title>Dashboard</title>
 </head>
-
 <body>
 
-<h2>Tela de Login</h2>
+<h2>Bem-vindo ao Sistema</h2>
 
-<input type="text" id="usuario" placeholder="Usuário">
+<p>Área de gerenciamento de não conformidades</p>
 
-<br><br>
-
-<input type="password" id="senha" placeholder="Senha">
-
-<br><br>
-
-<button onclick="login()">
-Entrar
-</button>
-
-<p id="mensagem"></p>
+<button onclick="irCadastro()">Registrar Não Conformidade</button>
 
 <script>
-
-function login(){
-
-let usuario =
-document.getElementById("usuario").value;
-
-let senha =
-document.getElementById("senha").value;
-
-if(usuario == "admin" && senha == "123"){
-
-document.getElementById("mensagem").innerHTML =
-"Login realizado com sucesso!";
-
-}else{
-
-document.getElementById("mensagem").innerHTML =
-"Usuário ou senha incorretos!";
-
+function irCadastro() {
+    window.location.href = "cadastro.html";
 }
-
-}
-
 </script>
 
 </body>
-
 </html>
