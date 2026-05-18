@@ -4,56 +4,61 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Login</title>
 
 <style>
 
 body{
-font-family: Arial;
-background:#f0f2f5;
+
+background:#e9ecef;
+font-family:Arial;
 display:flex;
 justify-content:center;
 align-items:center;
 height:100vh;
+
 }
 
-.login-box{
+.caixa{
+
 background:white;
 padding:30px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.2);
 width:300px;
+border-radius:10px;
+box-shadow:0px 0px 10px gray;
+
 }
 
 h2{
+
 text-align:center;
+
 }
 
 input{
+
 width:100%;
 padding:10px;
 margin-top:10px;
+
 }
 
 button{
+
 width:100%;
 padding:10px;
 margin-top:15px;
-background:#0d6efd;
+background:blue;
 color:white;
 border:none;
-cursor:pointer;
+
 }
 
-button:hover{
-background:#0b5ed7;
-}
+p{
 
-#mensagem{
 text-align:center;
-margin-top:15px;
+
 }
 
 </style>
@@ -62,16 +67,18 @@ margin-top:15px;
 
 <body>
 
-<div class="login-box">
+<div class="caixa">
 
-<h2>Sistema de Não Conformidades</h2>
+<h2>Sistema de Login</h2>
 
 <input type="text" id="usuario" placeholder="Usuário">
 
 <input type="password" id="senha" placeholder="Senha">
 
 <button onclick="login()">
+
 Entrar
+
 </button>
 
 <p id="mensagem"></p>
